@@ -1,3 +1,4 @@
-FROM alpine:3.5
-ADD vault_exporter /usr/bin
-ENTRYPOINT ["/usr/bin/vault_exporter"]
+FROM alpine:3.9.4
+WORKDIR /
+COPY vault_exporter .
+ENTRYPOINT ["/vault_exporter"]
